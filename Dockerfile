@@ -1,4 +1,4 @@
-FROM docker:1.12.1-dind
+FROM docker:1.13.1-dind
 
 RUN apk add --no-cache \
 		git \
