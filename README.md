@@ -13,5 +13,7 @@ hub: https://hub.docker.com/r/thatsmrtalbot/dind-swarm/
 The swarm will take a minute or so to start up, as long as it hasn't exited, you'll get EOF error or valid output
 
 `docker -H tcp://127.0.0.1:3000 info`
+
 `docker -H tcp://127.0.0.1:3000 node ls`
+
 `docker -H tcp://127.0.0.1:3000 node promote swarm-slave1`
