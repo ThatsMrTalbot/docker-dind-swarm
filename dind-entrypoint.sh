@@ -8,10 +8,10 @@ docker daemon \
 
 sleep 5
 
-docker run -v /raft:/var/lib/docker/swarm/raft -h swarm-master -p 2375:2375 --privileged --name=swarm-master -d $@ docker:1.12.1-dind > /dev/null 2> /dev/null && echo "swarm-master started" || echo "swarm-master could not start" 
-docker run -h swarm-slave1 --privileged --name=swarm-slave1 -d docker:1.12.1-dind > /dev/null 2> /dev/null && echo "swarm-slave1 started" || echo "swarm-slave1 could not start" 
-docker run -h swarm-slave2 --privileged --name=swarm-slave2 -d docker:1.12.1-dind > /dev/null 2> /dev/null && echo "swarm-slave2 started" || echo "swarm-slave2 could not start" 
-docker run -h swarm-slave3 --privileged --name=swarm-slave3 -d docker:1.12.1-dind > /dev/null 2> /dev/null && echo "swarm-slave3 started" || echo "swarm-slave3 could not start" 
+docker run -v /raft:/var/lib/docker/swarm/raft -h swarm-master -p 2375:2375 --privileged --name=swarm-master -d $@ docker:1.13.1-dind > /dev/null 2> /dev/null && echo "swarm-master started" || echo "swarm-master could not start" 
+docker run -h swarm-slave1 --privileged --name=swarm-slave1 -d docker:1.13.1-dind > /dev/null 2> /dev/null && echo "swarm-slave1 started" || echo "swarm-slave1 could not start" 
+docker run -h swarm-slave2 --privileged --name=swarm-slave2 -d docker:1.13.1-dind > /dev/null 2> /dev/null && echo "swarm-slave2 started" || echo "swarm-slave2 could not start" 
+docker run -h swarm-slave3 --privileged --name=swarm-slave3 -d docker:1.13.1-dind > /dev/null 2> /dev/null && echo "swarm-slave3 started" || echo "swarm-slave3 could not start" 
 
 sleep 1
 
